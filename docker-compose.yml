@@ -147,6 +147,17 @@ services:
       - backend
     restart: always
 
+  node-exporter:
+    build:
+      context: ./node_exporter
+    environment:
+      - TZ=${TZ}
+    ports:
+      - "${NODE_EXPORTER_PORT}:9100"
+    networks:
+      - backend
+    restart: always
+
   jaeger:
     build:
       context: ./jaeger
