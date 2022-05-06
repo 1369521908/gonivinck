@@ -149,7 +149,7 @@ services:
 
   node-exporter:
     build:
-      context: ./node_exporter
+      context: ./node-exporter
     environment:
       - TZ=${TZ}
     ports:
